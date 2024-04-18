@@ -1,0 +1,18 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# 주어진 변수
+f0 = 2
+f1 = 3
+t_values = np.linspace(-1/f1, 1/f1, 1000)  # -1/f1부터 1/f1까지 t 값 생성
+
+# U(t) 계산
+U_t = 2 * np.cos(2 * np.pi * (f0 + f1) * t_values / 2 - np.pi / 4)
+
+# 그래프 그리기
+plt.plot(t_values, U_t)
+plt.xlabel('t')
+plt.ylabel('U(t)')
+plt.title('Graph of U(t)')
+plt.grid(True)
+plt.show()
